@@ -1,5 +1,6 @@
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.service import Service
 import time
 from datetime import datetime
 import sys
@@ -13,7 +14,8 @@ import chromedriver_autoinstaller as chrmdrvr
 chrmdrvr.install()
 
 def config():
-    driver = "chromedriver.exe" ##Debe estar en la misma carpeta que el OrderBot.py
+    servicio = Service(executable_path=r"chromedriver.exe") ##Debe estar en la misma carpeta que el OrderBot.py
+    
     #brave_path = "C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe"
     #chrome_path = "C:/Program Files/Google/Chrome/Application/chrome.exe"
 
@@ -32,7 +34,7 @@ def config():
     # option.add_argument("--headless") OPCIONAL
 
     # Nueva instancia de Chrome
-    browser = webdriver.Chrome(executable_path=driver, options=option)
+    browser = webdriver.Chrome(service=servicio, options=option)
     #browser = webdriver.Chrome(ChromeDriverManager().install(),options=option)
     return browser
 
