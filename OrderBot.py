@@ -7,10 +7,13 @@ import ntpath
 import xlsxwriter
 import os
 
-
+##Agregamos un nuevo módulo para evitar problemas con el driver. 
+import chromedriver_binary
+import chromedriver_autoinstaller as chrmdrvr
+chrmdrvr.install()
 
 def config():
-    #driver_path = "C:/Users/zuriel/AppData/Local/Programs/Python/Python310/Lib/site-packages/selenium/webdriver/chrome/chromedriver.exe"
+    driver = "chromedriver.exe" ##Debe estar en la misma carpeta que el OrderBot.py
     #brave_path = "C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe"
     #chrome_path = "C:/Program Files/Google/Chrome/Application/chrome.exe"
 
@@ -29,8 +32,8 @@ def config():
     # option.add_argument("--headless") OPCIONAL
 
     # Nueva instancia de Chrome
-    #browser = webdriver.Chrome(executable_path=driver, options=option)
-    browser = webdriver.Chrome(ChromeDriverManager().install(),options=option)
+    browser = webdriver.Chrome(executable_path=driver, options=option)
+    #browser = webdriver.Chrome(ChromeDriverManager().install(),options=option)
     return browser
 
 
@@ -52,7 +55,7 @@ def login(browser,username,password):
 
     browser.get('http://edifast1.com.mx/inicio.aspx')
 
-    quitaAvisos(browser)
+    #quitaAvisos(browser) Si hay aviso, utilizar
 
     return browser
 
