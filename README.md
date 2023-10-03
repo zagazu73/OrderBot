@@ -16,4 +16,7 @@ pip3 install ChromeDriverManager
 pip3 install chromedriver_binary
 ```
 
+### Chrome Driver
+Asegúrese de tener el driver correspondiente a la versión de chrome que tiene. Puede descargarlo en la siguiente página: https://chromedriver.chromium.org/downloads
 
+El ejecutable de este driver deberá estar guardado en la misma carpeta que el "OrderBot.py"
