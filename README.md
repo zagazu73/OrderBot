@@ -4,7 +4,7 @@ Un bot que implementa técnicas de WebScrapying para poder extraer datos especí
 
 
 ## Manual de instalación
-**
+***
 Este programa está escrito en Python en su totalidad. Por lo anterior, es necesario tener instalado Python 3.
 Una vez instalado Python 3, deberá ejecutar a la siguiente instrucción desde una línea de comandos en Powershell (para Windows) con permisos de administrador o desde una terminal de Linux:
 ```
