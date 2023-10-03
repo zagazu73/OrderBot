@@ -9,8 +9,11 @@ Este programa está escrito en Python en su totalidad. Por lo anterior, es neces
 Una vez instalado Python 3, deberá ejecutar a la siguiente instrucción desde una línea de comandos en Powershell (para Windows) con permisos de administrador o desde una terminal de Linux:
 ```
 pip install selenium
-pip3 install webdriver
+pip3 install webdriver_manager
 pip3 install xlsxwriter
+pip3 install datetime
+pip3 install ChromeDriverManager
+pip3 install chromedriver_binary
 ```
 
 
